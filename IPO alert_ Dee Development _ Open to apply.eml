@@ -1,0 +1,712 @@
+Delivered-To: freestyler1010.ar@gmail.com
+Received: by 2002:a02:9716:0:b0:4b7:cc82:a932 with SMTP id x22csp4744049jai;
+        Thu, 20 Jun 2024 05:22:54 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGgXKdNNksOx0KQRQlHUUiiirOnAIqnkw4b5SZqkTCfuxKCfgCy7KSFHoSx75i0SWsoP+HM
+X-Received: by 2002:a05:6808:300a:b0:3d2:2a17:9208 with SMTP id 5614622812f47-3d51badd4d2mr5269719b6e.51.1718886174088;
+        Thu, 20 Jun 2024 05:22:54 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1718886174; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Ly2agXl6LCVMnxs/+zVFZ6afe7Ni8r2jHS+sKb90Oq/HdSZrkETnmYhoH3+x12zJWY
+         sM5TUwlMsDvVkdDoxLP+7DOEXiOQN9x9TDqOOwFdaVf/5D4Qdi8uoxSFABD7IKVIplUK
+         6qc+/bashW4qI/HLBiAVAgJXVxz/oMbw6w6fUH7fI9WnkBra3W+T/5qy4eHeXVkrW05v
+         Fyk4MILhTVJaCGXFVRPD89jPJrJDjAqlwXBV+Dvi6poJpDVzqAYpCPxGPHb0MtkT8c9s
+         je/fIr2sF4xz9DlpLrXyOPl4A0o8JX2MEI4cLpHg+0+ec6D9Hgb8ZcZdeJ8v+doTzCTq
+         hwIA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe-post:feedback-id:list-unsubscribe
+         :content-transfer-encoding:mime-version:message-id:subject:from:to
+         :date:dkim-signature:dkim-signature;
+        bh=xR5FYfhU57JmLPCNsrcGJxNzq6sd1tfdMrbRKBVfwC0=;
+        fh=u9+r9/hIBcjfAhN9nje5xtZSabT4EAqjEZ6TtOCx+xE=;
+        b=UjdDl9qDCqK49yaIYEniHlSkEOBf5Fu68qaIZL0xdvF3l/UDqAvhRVKtsxntzTD/vp
+         OtMA1ZUhILeBmLCnxHDe/0Q2C06IbOe0idbHmdgjfd1TmGZPy6FB1H8ns3Q7rW9HRol1
+         MDw5525mpDarXe/PluoLMGseKDs9fFWnLhy8FVswZrQ6HnhcL76qjLqF4ZiY4ZKEGu5u
+         7MZstf+ASOVojbsHjT0LYqluym+/zeukj86gCOndilInVRL+u5tlAfrZkcaQyCieks4B
+         ZuXy+Vzmnm21NBGgvG/r8D5Gk3dOPl+bxC11No4ha9WW6kFNc5hG8Py6gfjl+Y9Dug8Z
+         fxqQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@groww.in header.s=pepipost header.b="F3DIG/hC";
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=ESUmjjOl;
+       spf=pass (google.com: domain of 17188227751106525-178520-1-gmail.com@delivery.groww.in designates 150.129.232.74 as permitted sender) smtp.mailfrom=17188227751106525-178520-1-gmail.com@delivery.groww.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=groww.in
+Return-Path: <17188227751106525-178520-1-gmail.com@delivery.groww.in>
+Received: from fallbackmta-232.74.groww.in (fallbackmta-232.74.groww.in. [150.129.232.74])
+        by mx.google.com with ESMTPS id d75a77b69052e-441f2ea8a2bsi162310631cf.364.2024.06.20.05.22.53
+        for <freestyler1010.ar@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 20 Jun 2024 05:22:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 17188227751106525-178520-1-gmail.com@delivery.groww.in designates 150.129.232.74 as permitted sender) client-ip=150.129.232.74;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@groww.in header.s=pepipost header.b="F3DIG/hC";
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=ESUmjjOl;
+       spf=pass (google.com: domain of 17188227751106525-178520-1-gmail.com@delivery.groww.in designates 150.129.232.74 as permitted sender) smtp.mailfrom=17188227751106525-178520-1-gmail.com@delivery.groww.in;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=groww.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=groww.in; s=pepipost;
+	h=list-unsubscribe-post:feedback-id:list-unsubscribe:content-transfer-encoding:
+	 content-type:mime-version:message-id:subject:from:to:from:to:subject;
+	bh=xR5FYfhU57JmLPCNsrcGJxNzq6sd1tfdMrbRKBVfwC0=;
+	b=F3DIG/hCEyzm+zMETuX4WVMDPC8pwmnctzqjJTCNeYJQtDpN0ZKYfF1RiY42LdYcwwXdC+Q+6eGkL
+	 IFce8jmsEARtzp1fuDZiwYcvT6kSXFT94fUdKA4eFT9ArY+hMrYKOz7pyhhVltTxkTCVkzGKf//rvN
+	 lrs1FSqwZf7mw8YM=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=env.etransmail.com; s=fnc;
+	h=list-unsubscribe-post:feedback-id:list-unsubscribe:content-transfer-encoding:
+	 content-type:mime-version:message-id:subject:from:to:from:to:subject;
+	bh=xR5FYfhU57JmLPCNsrcGJxNzq6sd1tfdMrbRKBVfwC0=;
+	b=ESUmjjOlCCDF0LJ/mUjrDQOIYe+PLuNH0Vov+b23+VrzbOnpGZmLbJdYu/gg878dftgJMaME4sQe9
+	 2jdjd3Ne5gbhOuFKneLItIYa02RhBeJRRTMbu1Lhh1/Ik0XX6eODe0LJPHhSbDRBDaxa7O5L689CaR
+	 tM1C9LK9JjzivApo=
+Date: Thu, 20 Jun 2024 17:52:53 +0530
+To: <freestyler1010.ar@gmail.com>
+From: =?UTF-8?B?R3Jvd3c=?= <noreply@groww.in>
+Subject: =?UTF-8?B?SVBPIGFsZXJ0OiBEZWUgRGV2ZWxvcG1lbnQgfCBPcGVuIHRvIGFwcGx5?=
+Message-Id: <tznakn17188227751106525@groww.in>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_----------=_1718886151250692741"
+Content-Transfer-Encoding: binary
+List-Unsubscribe: <https://delivery.groww.in/YUXVBOWJR?id=178520=N0QGUAABBVRRTkYRFhJDRhhERRkUFEZCGRFDEBUQFRBCGBZBFxkQRkESRhEWEkNGGFQZX0ZRAxFNSA9VRwEFAVIWVxN3Xl0HCF5IUllfH1cPVV0BBgZRVQwAUgADBQcFHlBCFUdKCklOVgNdX0QGFEFKAktbQxFMUF9MaWBoY3Itb3wzCFBUGhcB>, <mailto:17188227751106525-178520-fncunsub@usub.ftrans03.com?subject=Unsubscribe>
+Feedback-Id: 178520:202406:1:falconide
+X-Fncid: 178520-17188227751106525-0
+X-Injtime: 1718886151
+X-Traffic-Type: 178520-2
+X-Mailer: NetcoreCloud Mailer
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+
+This is a multi-part message in MIME format.
+
+--_----------=_1718886151250692741
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+=
+
+--_----------=_1718886151250692741
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!doctype html><html><head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <meta content=3D"telephone=3Dno" name=3D"format-detection">
+    <title></title>
+    <style type=3D"text/css">
+        @import url(https://fonts.googleapis.com/css?family=3DOpen+Sans:300=
+,400,500,600,700);
+    </style>
+    <style>
+        @media screen and (max-width: 600px) {
+            u+.body {
+                width: 100vw !important;
+            }
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+    </style>
+    <!--[if mso]>
+      <style type=3D"text/css">
+        body, table, td {
+        	font-family: Arial, Helvetica, sans-serif !important;
+        }
+=20=20=20=20=20=20=20=20
+        img {
+        	-ms-interpolation-mode: bicubic;
+        }
+=20=20=20=20=20=20=20=20
+        .box {
+        	border-color: #eee !important;
+        }
+      </style>
+    <![endif]-->
+=20=20=20=20
+<style>body {
+margin: 0; padding: 0; background-color: #f5f7fb; font-size: 15px; line-hei=
+ght: 160%; mso-line-height-rule: exactly; color: #444444; width: 100%;
+}
+body {
+font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetic=
+a Neue, Helvetica, Arial, sans-serif;
+}
+img {
+border: 0 none; line-height: 100%; outline: none; text-decoration: none; ve=
+rtical-align: baseline; font-size: 0;
+}
+a:hover {
+text-decoration: underline;
+}
+.btn:hover {
+text-decoration: none;
+}
+.btn.bg-bordered:hover {
+background-color: #f9fbfe !important;
+}
+a.bg-blue:hover {
+background-color: #3a77cc !important;
+}
+a.bg-azure:hover {
+background-color: #37a3f1 !important;
+}
+a.bg-indigo:hover {
+background-color: #596ac9 !important;
+}
+a.bg-purple:hover {
+background-color: #9d50e8 !important;
+}
+a.bg-pink:hover {
+background-color: #f55f91 !important;
+}
+a.bg-red:hover {
+background-color: #c01e1d !important;
+}
+a.bg-orange:hover {
+background-color: #fd8e35 !important;
+}
+a.bg-yellow:hover {
+background-color: #e3b90d !important;
+}
+a.bg-lime:hover {
+background-color: #73cb2d !important;
+}
+a.bg-green:hover {
+background-color: #56ab00 !important;
+}
+a.bg-teal:hover {
+background-color: #28beae !important;
+}
+a.bg-cyan:hover {
+background-color: #1596aa !important;
+}
+a.bg-gray:hover {
+background-color: #95a9b0 !important;
+}
+a.bg-secondary:hover {
+background-color: #ecf0f2 !important;
+}
+.img-hover:hover img {
+opacity: .64;
+}
+@media only screen and (max-width: 560px) {
+  body {
+    font-size: 14px !important;
+  }
+  .content {
+    padding: 24px !important;
+  }
+  .content-image-text {
+    padding: 24px !important;
+  }
+  .content-image {
+    height: 100px !important;
+  }
+  .content-image-text {
+    padding-top: 96px !important;
+  }
+  h1 {
+    font-size: 24px !important;
+  }
+  .h1 {
+    font-size: 24px !important;
+  }
+  h2 {
+    font-size: 20px !important;
+  }
+  .h2 {
+    font-size: 20px !important;
+  }
+  h3 {
+    font-size: 18px !important;
+  }
+  .h3 {
+    font-size: 18px !important;
+  }
+  .col {
+    display: table !important; width: 100% !important;
+  }
+  .col-spacer {
+    display: table !important; width: 100% !important;
+  }
+  .col-spacer-xs {
+    display: table !important; width: 100% !important;
+  }
+  .col-spacer-sm {
+    display: table !important; width: 100% !important;
+  }
+  .col-hr {
+    display: table !important; width: 100% !important;
+  }
+  .row {
+    display: table !important; width: 100% !important;
+  }
+  .col-hr {
+    border: 0 !important; height: 24px !important; width: auto !important; =
+background: transparent !important;
+  }
+  .col-spacer {
+    width: 100% !important; height: 24px !important;
+  }
+  .col-spacer-sm {
+    height: 16px !important;
+  }
+  .col-spacer-xs {
+    height: 8px !important;
+  }
+  .chart-cell-spacer {
+    width: 4px !important;
+  }
+  .text-mobile-center {
+    text-align: center !important;
+  }
+  .d-mobile-none {
+    display: none !important;
+  }
+}
+</style></head>
+
+<body class=3D"bg-body" style=3D"font-size: 15px; margin: 0; padding: 0; li=
+ne-height: 160%; mso-line-height-rule: exactly; color: #444444; width: 100%=
+; font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvet=
+ica Neue, Helvetica, Arial, sans-serif;" bgcolor=3D"#f5f7fb"><div style=3D"=
+display:none; visibility:hidden; font-size:1px; color:#ffffff; line-height:=
+1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden;"><p> Check =
+complete details of the IPO =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =
+=E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F=
+ =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=
+=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =
+=CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF =
+ =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF=
+  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=
+=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=
+=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =
+=EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87=
+ =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=
+=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=
+=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =
+=E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C=
+ =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=
+=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=
+=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =
+=E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F=
+ =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=
+=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =
+=CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF =
+ =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF  =CD=8F =E2=80=8C =E2=80=87 =EF=BB=BF=
+  </p></div>
+<center><span style=3D"font-size: 12px;"></span><table class=3D"main bg-bod=
+y" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" style=3D"font-family:=
+ Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helv=
+etica, Arial, sans-serif; border-collapse: collapse; width: 100%; -webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%;" bgcolor=3D"#f5f7fb"><tb=
+ody><tr><td align=3D"center" valign=3D"top" style=3D"font-family: Open Sans=
+, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Ari=
+al, sans-serif;"><!-- [if (gte mso 9)|(IE)]>
+              <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                <tr>
+                  <td align=3D"center" valign=3D"top" width=3D"640">
+            <![endif]--> <span class=3D"preheader" style=3D"font-size: 0; p=
+adding: 0; display: none; max-height: 0; mso-hide: all; line-height: 0; col=
+or: transparent; height: 0; max-width: 0; opacity: 0; overflow: hidden; vis=
+ibility: hidden; width: 0;"> </span><table class=3D"wrap" cellspacing=3D"0"=
+ cellpadding=3D"0" style=3D"font-family: Open Sans, -apple-system, BlinkMac=
+SystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; border-co=
+llapse: collapse; width: 100%; max-width: 640px; text-align: left;"><tbody>=
+<tr><td class=3D"p-sm" style=3D"font-family: Open Sans, -apple-system, Blin=
+kMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; paddi=
+ng: 8px;"><table cellpadding=3D"0" cellspacing=3D"0" style=3D"font-family: =
+Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helve=
+tica, Arial, sans-serif; border-collapse: collapse; width: 100%;"><tbody><t=
+r><td class=3D"py-lg" style=3D"font-family: Open Sans, -apple-system, Blink=
+MacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; paddin=
+g-top: 24px; padding-bottom: 24px;"><table cellspacing=3D"0" cellpadding=3D=
+"0" style=3D"font-family: Open Sans, -apple-system, BlinkMacSystemFont, Rob=
+oto, Helvetica Neue, Helvetica, Arial, sans-serif; border-collapse: collaps=
+e; width: 100%;"><tbody><tr><td style=3D"font-family: Open Sans, -apple-sys=
+tem, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-ser=
+if;"></td><td class=3D"text-right" style=3D"font-family: Open Sans, -apple-=
+system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-=
+serif;" align=3D"right"></td></tr></tbody></table></td></tr></tbody></table=
+><div class=3D"main-content"><table class=3D"box" cellpadding=3D"0" cellspa=
+cing=3D"0" style=3D"font-family: Open Sans, -apple-system, BlinkMacSystemFo=
+nt, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; border-collapse: =
+collapse; width: 100%; border-radius: 3px; -webkit-box-shadow: 0 1px 4px rg=
+ba(0, 0, 0, 0.05); box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); border: 1px s=
+olid #f0f0f0;" bgcolor=3D"#ffffff"><tbody><tr><td style=3D"font-family: Ope=
+n Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetic=
+a, Arial, sans-serif;"><table cellpadding=3D"0" cellspacing=3D"0" style=3D"=
+font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetic=
+a Neue, Helvetica, Arial, sans-serif; border-collapse: collapse; width: 100=
+%;"><tbody><tr><td class=3D"content pb-0" align=3D"center" style=3D"font-fa=
+mily: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue,=
+ Helvetica, Arial, sans-serif; padding: 40px 48px 0;"><p><a href=3D"https:/=
+/groww.weurl.co/d/lw/g1.jpg?p=3DeyJsYyI6Imlufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzU=
+zMTlhOTE0MTQwNGVhMjYxZDIwOGZmMzA0MjQ0YmY4ZSIsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZT=
+YtODFkNi00N2M5ZWMzNmFhNWYiLCJlbSI6ImZyZWVzdHlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsI=
+mUiOiIxNmtoNmxmIiwidiI6In4yNjhsZ2tkIiwicyI6ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjct=
+YzNiYi00M2U2LTlhNTUtOTE4ZTEzYWEwZDQyOjE3MTg4ODQ1NDIxMDciLCJldmVudCI6ImVtYWl=
+sX2NsaWNrIiwiY3RhIjoifjNlNTQ3MGExIiwidG9VUkwiOiJodHRwczovL2FwcC5ncm93dy5pbi=
+92M2NPL1NUT0NLU0VYUExPUkUifQ%3D%3D" style=3D"color: #467fcf; text-decoratio=
+n: none;"><img src=3D"https://groww.in/wp-content/uploads/2018/04/logo-grow=
+w-dark-1.png" width=3D"150" height=3D"41" alt style=3D"line-height: 100%; o=
+utline: none; text-decoration: none; vertical-align: baseline; font-size: 0=
+px; border: 0px none; display: block; margin-left: auto; margin-right: auto=
+;" data-mce-src=3D"https://groww.in/wp-content/uploads/2018/04/logo-groww-d=
+ark-1.png"></a></p><p><a href=3D"https://groww.weurl.co/d/lw/g1.jpg?p=3DeyJ=
+sYyI6Imlufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTlhOTE0MTQwNGVhMjYxZDIwOGZmMzA0Mj=
+Q0YmY4ZSIsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtODFkNi00N2M5ZWMzNmFhNWYiLCJlbSI6I=
+mZyZWVzdHlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiOiIxNmtoNmxmIiwidiI6In4yNjhsZ2tk=
+IiwicyI6ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNiYi00M2U2LTlhNTUtOTE4ZTEzYWEwZDQ=
+yOjE3MTg4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX2NsaWNrIiwiY3RhIjoifjMyODgzYzY4Ii=
+widG9VUkwiOiJodHRwczovL2dyb3d3LmluL2lwby9kZWUtZGV2ZWxvcG1lbnQtaXBvIn0%3D" t=
+arget=3D"_blank" rel=3D"noopener"><img src=3D"https://cms-resources.groww.i=
+n/uploads/10_DEE_Development_Engineers_IPO_4c6876ce3c.png" width=3D"100%" h=
+eight=3D"auto" alt style=3D"display: block; margin-left: auto; margin-right=
+: auto;" data-mce-src=3D"https://cms-resources.groww.in/uploads/10_DEE_Deve=
+lopment_Engineers_IPO_4c6876ce3c.png"></a><span style=3D"font-size: 24pt; f=
+ont-family: Roboto, sans-serif; color: #000000; background-color: transpare=
+nt; font-weight: 100; font-style: normal; font-variant: normal; text-decora=
+tion: none; vertical-align: baseline; white-space: pre-wrap;"></span></p><p=
+><span style=3D"font-size: 24pt; font-family: Roboto, sans-serif; color: #0=
+00000; background-color: transparent; font-weight: 100; font-style: normal;=
+ font-variant: normal; text-decoration: none; vertical-align: baseline; whi=
+te-space: pre-wrap;">A new IPO is here!</span></p><p style=3D"text-align: l=
+eft;"><br>A new IPO is open to apply: Dee Development</p><p style=3D"text-a=
+lign: left;"><strong>Bidding period:</strong>&nbsp;19 June - 21 June (Open =
+for bidding)</p><p style=3D"text-align: left;"><strong>Price per share:</st=
+rong>&nbsp;=E2=82=B9193 - =E2=82=B9203</p><p style=3D"text-align: left;"><s=
+trong>Lot size:</strong>&nbsp;73 (i.e. you=E2=80=99ll have to apply for mul=
+tiples of 73 shares)</p><p style=3D"text-align: left;"><strong>To be listed=
+ on:</strong>&nbsp;25 June 2024</p><p style=3D"text-align: left;"><strong>R=
+etail Subscription Rate: </strong>5.5x</p><p style=3D"text-align: left;"><s=
+trong>Want to apply for the Dee Development</strong><strong>&nbsp;</strong>=
+<strong>IPO</strong><strong>?<br><br></strong>Dee Development incorporated&=
+nbsp;in 1988, is an ISO-certified piping solutions company providing engine=
+ering, procurement, and manufacturing services to various process-oriented =
+industries, including oil and gas, power (including nuclear), and chemicals=
+. <strong><br></strong></p><p style=3D"margin: 0px 0px 1em; text-align: lef=
+t;"><a href=3D"https://groww.weurl.co/d/lw/g1.jpg?p=3DeyJsYyI6Imlufjc2YWEzO=
+TIiLCJsIjoiYTFjOTg2YzUzMTlhOTE0MTQwNGVhMjYxZDIwOGZmMzA0MjQ0YmY4ZSIsImMiOiIx=
+MTcxYjU2Zi05ZjZhLTRjZTYtODFkNi00N2M5ZWMzNmFhNWYiLCJlbSI6ImZyZWVzdHlsZXIxMDE=
+wLmFyQGdtYWlsLmNvbSIsImUiOiIxNmtoNmxmIiwidiI6In4yNjhsZ2tkIiwicyI6ImhiZ2g5Zm=
+k5ZmE2MDVfZTNmOWNiMjctYzNiYi00M2U2LTlhNTUtOTE4ZTEzYWEwZDQyOjE3MTg4ODQ1NDIxM=
+DciLCJldmVudCI6ImVtYWlsX2NsaWNrIiwiY3RhIjoifjU3ZGJkNzIyIiwidG9VUkwiOiJodHRw=
+czovL2dyb3d3LmluL2lwby9kZWUtZGV2ZWxvcG1lbnQtaXBvIn0%3D" style=3D"background=
+-color: #4f74ee; border-color: #4f74ee; border-radius: 0px; border-style: s=
+olid; border-width: 13px 16px; color: #ffffff; display: inline-block; lette=
+r-spacing: 1px; max-width: 300px; min-width: 150px; text-align: center; tex=
+t-decoration: none; text-transform: uppercase; transition: all 0.2s ease-in=
+ 0s;" target=3D"_blank" rel=3D"noopener">APPLY NOW</a></p><ul style=3D"text=
+-align: left;"></ul><p style=3D"text-align: left;">Got a question? Find all=
+ your answers at our <span style=3D"color: #3366ff;"><a href=3D"https://gro=
+ww.weurl.co/d/lw/g1.jpg?p=3DeyJsYyI6Imlufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTl=
+hOTE0MTQwNGVhMjYxZDIwOGZmMzA0MjQ0YmY4ZSIsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtOD=
+FkNi00N2M5ZWMzNmFhNWYiLCJlbSI6ImZyZWVzdHlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiO=
+iIxNmtoNmxmIiwidiI6In4yNjhsZ2tkIiwicyI6ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNi=
+Yi00M2U2LTlhNTUtOTE4ZTEzYWEwZDQyOjE3MTg4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX2N=
+saWNrIiwiY3RhIjoifjRiMjBhM2Q5IiwidG9VUkwiOiJodHRwczovL2FwcC5ncm93dy5pbi92M2=
+NPL2E2NTQ5ZDFmIn0%3D" style=3D"color: #3366ff;">help center =E2=86=92</a></=
+span></p><table cellspacing=3D"0" cellpadding=3D"0" style=3D"font-family: O=
+pen Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvet=
+ica, Arial, sans-serif; border-collapse: collapse; width: 100%;"><tbody><tr=
+><td class=3D"va-top pr-md w-1p" style=3D"font-family: Open Sans, -apple-sy=
+stem, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-se=
+rif; width: 1%; padding-right: 16px;" valign=3D"top"><img src=3D"https://gr=
+oww.in/wp-content/uploads/2018/12/groww-logo.png" class=3D" avatar " width=
+=3D"48" height=3D"48" alt style=3D"line-height: 100%; border: 0 none; outli=
+ne: none; text-decoration: none; vertical-align: baseline; font-size: 0; bo=
+rder-radius: 50%; -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); box-sh=
+adow: 0 1px 4px rgba(0, 0, 0, 0.05);" data-mce-src=3D"https://groww.in/wp-c=
+ontent/uploads/2018/12/groww-logo.png"></td><td class=3D"va-middle" style=
+=3D"font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helv=
+etica Neue, Helvetica, Arial, sans-serif;" valign=3D"middle"><span class=3D=
+"text-muted" style=3D"color: #9eb0b7;">Team Groww</span></td></tr></tbody><=
+/table></td></tr></tbody></table></td></tr></tbody></table></div><table cel=
+lspacing=3D"0" cellpadding=3D"0" style=3D"font-family: Open Sans, -apple-sy=
+stem, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-se=
+rif; border-collapse: collapse; width: 100%;"><tbody><tr><td class=3D"py-xl=
+" style=3D"font-family: Open Sans, -apple-system, BlinkMacSystemFont, Robot=
+o, Helvetica Neue, Helvetica, Arial, sans-serif; padding-top: 48px; padding=
+-bottom: 48px;"><table class=3D"font-sm text-center text-muted" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"font-family: Open Sans, -apple-system, Bl=
+inkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; bor=
+der-collapse: collapse; width: 100%; color: #9eb0b7; text-align: center; fo=
+nt-size: 13px;"><tbody><tr><td align=3D"center" class=3D"pb-md" style=3D"fo=
+nt-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica =
+Neue, Helvetica, Arial, sans-serif; padding-bottom: 16px;"></td></tr><tr><t=
+d class=3D"pt-md" style=3D"font-family: Open Sans, -apple-system, BlinkMacS=
+ystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; padding-to=
+p: 16px;"><table class=3D"font-sm text-center text-muted" cellspacing=3D"0"=
+ cellpadding=3D"0" style=3D"font-family: Open Sans, -apple-system, BlinkMac=
+SystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; border-co=
+llapse: collapse; width: 100%; color: #9eb0b7; text-align: center; font-siz=
+e: 12px; line-height: 1.5;"><tbody><tr><td class=3D"pad"><div style=3D"font=
+-family: Arial,sans-serif;"><div class style=3D"font-size: 14px; font-famil=
+y: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif; mso-line-height=
+-alt: 16.8px; color: #44475b; line-height: 1.2;"><p style=3D"margin: 0; fon=
+t-size: 14px; text-align: center; mso-line-height-alt: 16.8px;"><strong>Fol=
+low us yet?&nbsp;</strong></p></div></div></td></tr></tbody></table><table =
+class=3D"text_block block-2" width=3D"100%" border=3D"0" cellpadding=3D"5" =
+cellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace: 0; mso-t=
+able-rspace: 0; word-break: break-word;"><tbody><tr><td class=3D"pad"><div =
+style=3D"font-family: Arial,sans-serif;"><div class style=3D"font-size: 12p=
+x; font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif; mso-li=
+ne-height-alt: 21.6px; color: #44475b; line-height: 1.8;"><p style=3D"margi=
+n: 0; font-size: 12px; text-align: center; mso-line-height-alt: 21.6px;"><s=
+pan style=3D"font-size: 12px;">Our social is a treasure box of finance cont=
+ent. <strong>=F0=9F=91=8D&nbsp;</strong></span></p></div></div></td></tr></=
+tbody></table><table class=3D"social_block block-3" width=3D"100%" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"m=
+so-table-lspace: 0; mso-table-rspace: 0;"><tbody><tr><td class=3D"pad" styl=
+e=3D"text-align: center; padding: 15px 10px 5px 10px;"><div class=3D"alignm=
+ent" align=3D"center"><table class=3D"social-table" width=3D"260px" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"m=
+so-table-lspace: 0; mso-table-rspace: 0; display: inline-block;"><tbody><tr=
+><td style=3D"padding: 0 10px 0 10px;"><a href=3D"https://groww.weurl.co/d/=
+lw/g1.jpg?p=3DeyJsYyI6Imlufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTlhOTE0MTQwNGVhM=
+jYxZDIwOGZmMzA0MjQ0YmY4ZSIsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtODFkNi00N2M5ZWMz=
+NmFhNWYiLCJlbSI6ImZyZWVzdHlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiOiIxNmtoNmxmIiw=
+idiI6In4yNjhsZ2tkIiwicyI6ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNiYi00M2U2LTlhNT=
+UtOTE4ZTEzYWEwZDQyOjE3MTg4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX2NsaWNrIiwiY3RhI=
+joiNTcwYTE4MjQiLCJ0b1VSTCI6Imh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2NoYW5uZWwvVUN3=
+NVRMcnozcUFEYWJ3ZXpURWNPbWdRIn0%3D" target=3D"_blank" rel=3D"noopener"><img=
+ src=3D"https://app-rsrc.getbee.io/public/resources/social-networks-icon-se=
+ts/circle-dark-gray/youtube@2x.png" width=3D"32" height=3D"32" alt=3D"YouTu=
+be" title=3D"YouTube" style=3D"display: block; height: auto; border: 0;" da=
+ta-mce-src=3D"https://app-rsrc.getbee.io/public/resources/social-networks-i=
+con-sets/circle-dark-gray/youtube@2x.png"></a></td><td style=3D"padding: 0 =
+10px 0 10px;"><a href=3D"https://groww.weurl.co/d/lw/g1.jpg?p=3DeyJsYyI6Iml=
+ufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTlhOTE0MTQwNGVhMjYxZDIwOGZmMzA0MjQ0YmY4ZS=
+IsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtODFkNi00N2M5ZWMzNmFhNWYiLCJlbSI6ImZyZWVzd=
+HlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiOiIxNmtoNmxmIiwidiI6In4yNjhsZ2tkIiwicyI6=
+ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNiYi00M2U2LTlhNTUtOTE4ZTEzYWEwZDQyOjE3MTg=
+4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX2NsaWNrIiwiY3RhIjoiNjNjNjRiNWMiLCJ0b1VSTC=
+I6Imh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9ncm93d2FwcC8ifQ%3D%3D" target=3D"_blan=
+k" rel=3D"noopener"><img src=3D"https://app-rsrc.getbee.io/public/resources=
+/social-networks-icon-sets/circle-dark-gray/facebook@2x.png" width=3D"32" h=
+eight=3D"32" alt=3D"Facebook" title=3D"Facebook" style=3D"display: block; h=
+eight: auto; border: 0;" data-mce-src=3D"https://app-rsrc.getbee.io/public/=
+resources/social-networks-icon-sets/circle-dark-gray/facebook@2x.png"></a><=
+/td><td style=3D"padding: 0 10px 0 10px;"><a href=3D"https://groww.weurl.co=
+/d/lw/g1.jpg?p=3DeyJsYyI6Imlufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTlhOTE0MTQwNG=
+VhMjYxZDIwOGZmMzA0MjQ0YmY4ZSIsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtODFkNi00N2M5Z=
+WMzNmFhNWYiLCJlbSI6ImZyZWVzdHlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiOiIxNmtoNmxm=
+IiwidiI6In4yNjhsZ2tkIiwicyI6ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNiYi00M2U2LTl=
+hNTUtOTE4ZTEzYWEwZDQyOjE3MTg4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX2NsaWNrIiwiY3=
+RhIjoiM2Q3MmExYTMiLCJ0b1VSTCI6Imh0dHBzOi8vdHdpdHRlci5jb20vX2dyb3d3In0%3D" t=
+arget=3D"_blank" rel=3D"noopener"><img src=3D"https://app-rsrc.getbee.io/pu=
+blic/resources/social-networks-icon-sets/circle-dark-gray/twitter@2x.png" w=
+idth=3D"32" height=3D"32" alt=3D"Twitter" title=3D"Twitter" style=3D"displa=
+y: block; height: auto; border: 0;" data-mce-src=3D"https://app-rsrc.getbee=
+.io/public/resources/social-networks-icon-sets/circle-dark-gray/twitter@2x.=
+png"></a></td><td style=3D"padding: 0 10px 0 10px;"><a href=3D"https://grow=
+w.weurl.co/d/lw/g1.jpg?p=3DeyJsYyI6Imlufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTlh=
+OTE0MTQwNGVhMjYxZDIwOGZmMzA0MjQ0YmY4ZSIsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtODF=
+kNi00N2M5ZWMzNmFhNWYiLCJlbSI6ImZyZWVzdHlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiOi=
+IxNmtoNmxmIiwidiI6In4yNjhsZ2tkIiwicyI6ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNiY=
+i00M2U2LTlhNTUtOTE4ZTEzYWEwZDQyOjE3MTg4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX2Ns=
+aWNrIiwiY3RhIjoiNGEzZGQ0ZGIiLCJ0b1VSTCI6Imh0dHBzOi8vd3d3Lmluc3RhZ3JhbS5jb20=
+vZ3Jvd3dfb2ZmaWNpYWwvIn0%3D" target=3D"_blank" rel=3D"noopener"><img src=3D=
+"https://app-rsrc.getbee.io/public/resources/social-networks-icon-sets/circ=
+le-dark-gray/instagram@2x.png" width=3D"32" height=3D"32" alt=3D"Instagram"=
+ title=3D"Instagram" style=3D"display: block; height: auto; border: 0;" dat=
+a-mce-src=3D"https://app-rsrc.getbee.io/public/resources/social-networks-ic=
+on-sets/circle-dark-gray/instagram@2x.png"></a></td><td style=3D"padding: 0=
+ 10px 0 10px;"><a href=3D"https://groww.weurl.co/d/lw/g1.jpg?p=3DeyJsYyI6Im=
+lufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTlhOTE0MTQwNGVhMjYxZDIwOGZmMzA0MjQ0YmY4Z=
+SIsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtODFkNi00N2M5ZWMzNmFhNWYiLCJlbSI6ImZyZWVz=
+dHlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiOiIxNmtoNmxmIiwidiI6In4yNjhsZ2tkIiwicyI=
+6ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNiYi00M2U2LTlhNTUtOTE4ZTEzYWEwZDQyOjE3MT=
+g4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX2NsaWNrIiwiY3RhIjoiMjRkYTNhMzIiLCJ0b1VST=
+CI6Imh0dHBzOi8vd3d3LmxpbmtlZGluLmNvbS9jb21wYW55L2dyb3d3LmluLyJ9" target=3D"=
+_blank" rel=3D"noopener"><img src=3D"https://app-rsrc.getbee.io/public/reso=
+urces/social-networks-icon-sets/circle-dark-gray/linkedin@2x.png" width=3D"=
+32" height=3D"32" alt=3D"LinkedIn" title=3D"LinkedIn" style=3D"display: blo=
+ck; height: auto; border: 0;" data-mce-src=3D"https://app-rsrc.getbee.io/pu=
+blic/resources/social-networks-icon-sets/circle-dark-gray/linkedin@2x.png">=
+</a></td></tr></tbody></table></div></td></tr></tbody></table><table class=
+=3D"divider_block block-4" width=3D"100%" border=3D"0" cellpadding=3D"10" c=
+ellspacing=3D"0" role=3D"presentation" style=3D"mso-table-lspace: 0; mso-ta=
+ble-rspace: 0;"><tbody><tr><td class=3D"pad"><div class=3D"alignment" align=
+=3D"center"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D=
+"presentation" width=3D"100%" style=3D"mso-table-lspace: 0; mso-table-rspac=
+e: 0;"><tbody><tr><td class=3D"divider_inner" style=3D"font-size: 1px; line=
+-height: 1px; border-top: 1px solid #d6d6d6;"><span>=E2=80=8A</span></td></=
+tr></tbody></table></div></td></tr></tbody></table><table class=3D"text_blo=
+ck block-6" width=3D"100%" border=3D"0" cellpadding=3D"10" cellspacing=3D"0=
+" role=3D"presentation" style=3D"mso-table-lspace: 0; mso-table-rspace: 0; =
+word-break: break-word;"><tbody><tr><td class=3D"pad"><div style=3D"font-fa=
+mily: Arial,sans-serif;"><div style=3D"font-family: Arial,sans-serif;"><div=
+ class style=3D"font-size: 14px; mso-line-height-alt: 16.8px; color: #90909=
+0; line-height: 1.2; font-family: 'Open Sans','Helvetica Neue',Helvetica,Ar=
+ial,sans-serif;"><p style=3D"margin: 0; font-size: 12px; text-align: center=
+; mso-line-height-alt: 14.399999999999999px;"><span style=3D"background-col=
+or: transparent; font-family: 'Open Sans', sans-serif; font-size: 9pt; font=
+-weight: bold; white-space-collapse: preserve;">Groww Invest Tech Pvt Ltd</=
+span></p></div></div></div><div style=3D"font-family: Arial,sans-serif;"><d=
+iv class style=3D"font-size: 14px; mso-line-height-alt: 16.8px; color: #909=
+090; line-height: 1.2; font-family: 'Open Sans','Helvetica Neue',Helvetica,=
+Arial,sans-serif;"><p dir=3D"ltr" style=3D"line-height: 1.44; text-align: c=
+enter; margin-top: 0pt; margin-bottom: 0pt;"><a href=3D"https://groww.weurl=
+.co/d/lw/g1.jpg?p=3DeyJsYyI6Imlufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTlhOTE0MTQ=
+wNGVhMjYxZDIwOGZmMzA0MjQ0YmY4ZSIsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtODFkNi00N2=
+M5ZWMzNmFhNWYiLCJlbSI6ImZyZWVzdHlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiOiIxNmtoN=
+mxmIiwidiI6In4yNjhsZ2tkIiwicyI6ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNiYi00M2U2=
+LTlhNTUtOTE4ZTEzYWEwZDQyOjE3MTg4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX2NsaWNrIiw=
+iY3RhIjoiMzFhNjZkNmEiLCJ0b1VSTCI6Imh0dHBzOi8vZ3Jvd3cuaW4vYWJvdXQtdXMifQ%3D%=
+3D" style=3D"text-decoration: none;"><span style=3D"font-size: 9pt; font-fa=
+mily: 'Open Sans',sans-serif; color: #707070; background-color: transparent=
+; font-weight: bold; font-style: normal; font-variant: normal; text-decorat=
+ion: underline; -webkit-text-decoration-skip: none; text-decoration-skip-in=
+k: none; vertical-align: baseline; white-space: pre-wrap;">About Us</span><=
+/a><span style=3D"font-size: 9pt; font-family: 'Open Sans',sans-serif; colo=
+r: #909090; background-color: transparent; font-weight: bold; font-style: n=
+ormal; font-variant: normal; text-decoration: none; vertical-align: baselin=
+e; white-space: pre-wrap;"> |</span><a href=3D"https://groww.weurl.co/d/lw/=
+g1.jpg?p=3DeyJsYyI6Imlufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTlhOTE0MTQwNGVhMjYx=
+ZDIwOGZmMzA0MjQ0YmY4ZSIsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtODFkNi00N2M5ZWMzNmF=
+hNWYiLCJlbSI6ImZyZWVzdHlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiOiIxNmtoNmxmIiwidi=
+I6In4yNjhsZ2tkIiwicyI6ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNiYi00M2U2LTlhNTUtO=
+TE4ZTEzYWEwZDQyOjE3MTg4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX2NsaWNrIiwiY3RhIjoi=
+YjUyYzNiMSIsInRvVVJMIjoiaHR0cHM6Ly9ncm93dy5pbi90ZXJtcy1hbmQtY29uZGl0aW9ucy8=
+ifQ%3D%3D" style=3D"text-decoration: none;"><span style=3D"font-size: 9pt; =
+font-family: 'Open Sans',sans-serif; color: #909090; background-color: tran=
+sparent; font-weight: bold; font-style: normal; font-variant: normal; text-=
+decoration: none; vertical-align: baseline; white-space: pre-wrap;"> </span=
+><span style=3D"font-size: 9pt; font-family: 'Open Sans',sans-serif; color:=
+ #707070; background-color: transparent; font-weight: bold; font-style: nor=
+mal; font-variant: normal; text-decoration: underline; -webkit-text-decorat=
+ion-skip: none; text-decoration-skip-ink: none; vertical-align: baseline; w=
+hite-space: pre-wrap;">Terms &amp; Conditions</span></a><span style=3D"font=
+-size: 9pt; font-family: 'Open Sans',sans-serif; color: #909090; background=
+-color: transparent; font-weight: bold; font-style: normal; font-variant: n=
+ormal; text-decoration: none; vertical-align: baseline; white-space: pre-wr=
+ap;"> |</span><a href=3D"https://groww.weurl.co/d/lw/g1.jpg?p=3DeyJsYyI6Iml=
+ufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTlhOTE0MTQwNGVhMjYxZDIwOGZmMzA0MjQ0YmY4ZS=
+IsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtODFkNi00N2M5ZWMzNmFhNWYiLCJlbSI6ImZyZWVzd=
+HlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiOiIxNmtoNmxmIiwidiI6In4yNjhsZ2tkIiwicyI6=
+ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNiYi00M2U2LTlhNTUtOTE4ZTEzYWEwZDQyOjE3MTg=
+4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX2NsaWNrIiwiY3RhIjoiMTgxZTA2ZTkiLCJ0b1VSTC=
+I6Imh0dHBzOi8vZ3Jvd3cuaW4vcHJpdmFjeS1wb2xpY3kvIn0%3D" style=3D"text-decorat=
+ion: none;"><span style=3D"font-size: 9pt; font-family: 'Open Sans',sans-se=
+rif; color: #909090; background-color: transparent; font-weight: bold; font=
+-style: normal; font-variant: normal; text-decoration: none; vertical-align=
+: baseline; white-space: pre-wrap;"> </span><span style=3D"font-size: 9pt; =
+font-family: 'Open Sans',sans-serif; color: #707070; background-color: tran=
+sparent; font-weight: bold; font-style: normal; font-variant: normal; text-=
+decoration: underline; -webkit-text-decoration-skip: none; text-decoration-=
+skip-ink: none; vertical-align: baseline; white-space: pre-wrap;">Privacy P=
+olicy</span></a></p><p dir=3D"ltr" style=3D"line-height: 1.44; text-align: =
+center; margin-top: 0pt; margin-bottom: 0pt;"><span style=3D"font-size: 9pt=
+; font-family: 'Open Sans',sans-serif; color: #707070; background-color: tr=
+ansparent; font-weight: bold; font-style: normal; font-variant: normal; tex=
+t-decoration: underline; -webkit-text-decoration-skip: none; text-decoratio=
+n-skip-ink: none; vertical-align: baseline; white-space: pre-wrap;"><br></s=
+pan><span style=3D"font-size: 9pt; font-family: 'Open Sans',sans-serif; col=
+or: #909090; background-color: transparent; font-weight: bold; font-style: =
+normal; font-variant: normal; text-decoration: none; vertical-align: baseli=
+ne; white-space: pre-wrap;">You're getting this email because you're a Grow=
+w user and we believe you deserve great finance content and the latest upda=
+tes from us. However, you have the option to <span style=3D"color: #999999;=
+"><a href=3D"https://in.webengage.com/users/emails/unsubscribe.html?p=3DeyJ=
+sYyI6Imlufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTlhOTE0MTQwNGVhMjYxZDIwOGZmMzA0Mj=
+Q0YmY4ZSIsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtODFkNi00N2M5ZWMzNmFhNWYiLCJlbSI6I=
+mZyZWVzdHlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiOiIxNmtoNmxmIiwidiI6In4yNjhsZ2tk=
+IiwicyI6ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNiYi00M2U2LTlhNTUtOTE4ZTEzYWEwZDQ=
+yOjE3MTg4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX3Vuc3Vic2NyaWJlIiwiY3RhIjoiYmI0OW=
+M0MDgifQ%3D%3D" style=3D"color: #999999;">Unsubscribe here</a></span></span=
+><span style=3D"font-size: 9pt; font-family: 'Open Sans', sans-serif; color=
+: #999999; background-color: transparent; font-weight: bold; font-style: no=
+rmal; font-variant: normal; text-decoration: none; vertical-align: baseline=
+; white-space: pre-wrap;">.</span><span style=3D"font-size: 9pt; font-famil=
+y: 'Open Sans',sans-serif; color: #909090; background-color: transparent; f=
+ont-weight: bold; font-style: normal; font-variant: normal; text-decoration=
+: none; vertical-align: baseline; white-space: pre-wrap;"> Or if you need h=
+elp, we're</span><a href=3D"https://groww.weurl.co/d/lw/g1.jpg?p=3DeyJsYyI6=
+Imlufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTlhOTE0MTQwNGVhMjYxZDIwOGZmMzA0MjQ0YmY=
+4ZSIsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtODFkNi00N2M5ZWMzNmFhNWYiLCJlbSI6ImZyZW=
+VzdHlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiOiIxNmtoNmxmIiwidiI6In4yNjhsZ2tkIiwic=
+yI6ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNiYi00M2U2LTlhNTUtOTE4ZTEzYWEwZDQyOjE3=
+MTg4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX2NsaWNrIiwiY3RhIjoiYzgxNjA3NDEiLCJ0b1V=
+STCI6Imh0dHBzOi8vZ3Jvd3cuYXBwLmxpbmsvaGVscCJ9" style=3D"text-decoration: no=
+ne;"><span style=3D"font-size: 9pt; font-family: 'Open Sans',sans-serif; co=
+lor: #909090; background-color: transparent; font-weight: bold; font-style:=
+ normal; font-variant: normal; text-decoration: none; vertical-align: basel=
+ine; white-space: pre-wrap;"> </span><span style=3D"font-size: 9pt; font-fa=
+mily: 'Open Sans',sans-serif; color: #707070; background-color: transparent=
+; font-weight: bold; font-style: normal; font-variant: normal; text-decorat=
+ion: underline; -webkit-text-decoration-skip: none; text-decoration-skip-in=
+k: none; vertical-align: baseline; white-space: pre-wrap;">here</span></a><=
+span style=3D"font-size: 9pt; font-family: 'Open Sans',sans-serif; color: #=
+909090; background-color: transparent; font-weight: bold; font-style: norma=
+l; font-variant: normal; text-decoration: none; vertical-align: baseline; w=
+hite-space: pre-wrap;"> for you.</span></p><p dir=3D"ltr" style=3D"line-hei=
+ght: 1.44; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span =
+style=3D"font-size: 9pt; font-family: 'Open Sans',sans-serif; color: #90909=
+0; background-color: transparent; font-weight: bold; font-style: normal; fo=
+nt-variant: normal; text-decoration: none; vertical-align: baseline; white-=
+space: pre-wrap;">&nbsp;</span></p><p dir=3D"ltr" style=3D"line-height: 1.4=
+4; text-align: center; margin-top: 0pt; margin-bottom: 0pt;"><span style=3D=
+"font-size: 9pt; font-family: 'Open Sans',sans-serif; color: #909090; backg=
+round-color: transparent; font-weight: bold; font-style: normal; font-varia=
+nt: normal; text-decoration: none; vertical-align: baseline; white-space: p=
+re-wrap;">Our registered office address: No.11, 80 Feet Road, 4th Block, S.=
+T Bed, Koramangala, Bangalore =E2=80=93 560034, Karnataka</span></p></div><=
+/div></td></tr></tbody></table><table class=3D"divider_block block-7" width=
+=3D"100%" border=3D"0" cellpadding=3D"10" cellspacing=3D"0" role=3D"present=
+ation" style=3D"mso-table-lspace: 0; mso-table-rspace: 0;"><tbody><tr><td c=
+lass=3D"pad"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" width=3D"100%" style=3D"mso-table-lspace: 0; mso-table-rs=
+pace: 0;"><tbody><tr><td class=3D"divider_inner" style=3D"font-size: 1px; l=
+ine-height: 1px; border-top: 1px solid #d6d6d6;"><span>=E2=80=8A</span></td=
+></tr></tbody></table></td></tr></tbody></table><table class=3D"text_block =
+block-8" width=3D"100%" border=3D"0" cellpadding=3D"5" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"mso-table-lspace: 0; mso-table-rspace: 0; word=
+-break: break-word;"><tbody><tr><td class=3D"pad"><div style=3D"font-family=
+: Arial,sans-serif;"><div class style=3D"font-size: 14px; mso-line-height-a=
+lt: 16.8px; color: #afafaf; line-height: 1.2; font-family: 'Open Sans','Hel=
+vetica Neue',Helvetica,Arial,sans-serif;"><p dir=3D"ltr" style=3D"line-heig=
+ht: 1.44; text-align: justify; margin-top: 0pt; margin-bottom: 0pt;"><span =
+style=3D"font-size: 6pt; font-family: 'Open Sans',sans-serif; color: #afafa=
+f; background-color: transparent; font-weight: bold; font-style: normal; fo=
+nt-variant: normal; text-decoration: none; vertical-align: baseline; white-=
+space: pre-wrap;">Disclaimer: Kindly note that investment in securities mar=
+kets is subject to market risks, read all the related documents carefully b=
+efore investing.</span></p><p dir=3D"ltr" style=3D"line-height: 1.44; text-=
+align: justify; margin-top: 0pt; margin-bottom: 0pt;"><span style=3D"font-s=
+ize: 6pt; font-family: 'Open Sans',sans-serif; color: #afafaf; background-c=
+olor: transparent; font-weight: bold; font-style: normal; font-variant: nor=
+mal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap=
+;">Groww Invest Tech Pvt Ltd. - SEBI Registration no: INZ000301838,Research=
+ Analyst - INH2000086&nbsp; ,DPI Registration no: IN-DP-417-2019 and AMFI R=
+egistration No: ARN-111686</span></p><table class=3D"text_block block-6" wi=
+dth=3D"100%" border=3D"0" cellpadding=3D"10" cellspacing=3D"0" role=3D"pres=
+entation" style=3D"mso-table-lspace: 0; mso-table-rspace: 0; word-break: br=
+eak-word;"></table></div></div></td></tr></tbody></table></td></tr></tbody>=
+</table></td></tr></tbody></table></td></tr></tbody></table><!-- [if (gte m=
+so 9)|(IE)]>
+            </td>
+          </tr>
+        </table>
+            <![endif]--></td></tr></tbody></table></center>
+<img height=3D"0" width=3D"0" alt=3D" " src=3D"https://c.in.webengage.com/l=
+w/g1.jpg?p=3DeyJsYyI6Imlufjc2YWEzOTIiLCJsIjoiYTFjOTg2YzUzMTlhOTE0MTQwNGVhMj=
+YxZDIwOGZmMzA0MjQ0YmY4ZSIsImMiOiIxMTcxYjU2Zi05ZjZhLTRjZTYtODFkNi00N2M5ZWMzN=
+mFhNWYiLCJlbSI6ImZyZWVzdHlsZXIxMDEwLmFyQGdtYWlsLmNvbSIsImUiOiIxNmtoNmxmIiwi=
+diI6In4yNjhsZ2tkIiwicyI6ImhiZ2g5Zmk5ZmE2MDVfZTNmOWNiMjctYzNiYi00M2U2LTlhNTU=
+tOTE4ZTEzYWEwZDQyOjE3MTg4ODQ1NDIxMDciLCJldmVudCI6ImVtYWlsX29wZW4ifQ%3D%3D">=
+<p>&nbsp;<br></p>
+</body></html>=
+=
+
+--_----------=_1718886151250692741--
+
